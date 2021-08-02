@@ -1,17 +1,20 @@
 <template>
-  <ConvertTool1></ConvertTool1>
+  <h1>Hello App!</h1>
+
+  <p>
+    <router-link class="router-link" to="/">hello world</router-link>
+    <router-link class="router-link" to="/tool1">tool1</router-link>
+  </p>
+
+  <router-view></router-view>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import HelloWorld from './components/HelloWorld.vue'
-import ConvertTool1 from './components/ConvertTool1.vue'
 
 export default defineComponent({
   name: 'App',
   components: {
-    HelloWorld,
-    ConvertTool1
   }
 })
 </script>
@@ -26,4 +29,7 @@ export default defineComponent({
   margin-top: 60px;
 }
 
+.router-link+.router-link {
+  padding-left: 10px;
+}
 </style>
