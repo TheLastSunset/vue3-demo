@@ -25,13 +25,15 @@ export default defineComponent({
   },
   methods: {
     camelCaseNaming() {
-      let lowerText = this.text.toLowerCase();
+      let text = this.text || ''
+      let lowerText = text.trim().toLowerCase();
       this.output = lowerText.replace(/\_(\w)/g, function (all, letter) {
         return letter.toUpperCase();
       });
     },
     underscore() {
-      this.output = this.text.replace(/([A-Z])/g, "_$1").toUpperCase();
+      let text = this.text || ''
+      this.output = text.trim().replace(/([A-Z])/g, "_$1").toUpperCase();
     },
   },
 });
