@@ -1,10 +1,18 @@
 <template>
-  <textarea v-model="text" :rows="rows" :cols="cols"></textarea>
+  <el-input
+    type="textarea"
+    :autosize="{ minRows: rows, maxRows: cols}"
+    v-model="text">
+  </el-input>
   <hr />
-  <button @click="camelCaseNaming">Convert to camel case naming</button>
-  <button @click="underscore">Convert to underscore</button>
+  <el-button type="info" @click="camelCaseNaming">Convert to camel case naming</el-button>
+  <el-button type="info" @click="underscore">Convert to underscore</el-button>
   <hr />
-  <textarea v-model="output" :rows="rows" :cols="cols"></textarea>
+  <el-input
+    type="textarea"
+    :autosize="{ minRows: rows, maxRows: cols}"
+    v-model="output">
+  </el-input>
 </template>
 
 <script lang="ts">
