@@ -1,7 +1,7 @@
 import * as VueRouter from 'vue-router'
 
-import HelloWorld from '../components/HelloWorld.vue'
-import ConvertTool1 from '../components/ConvertTool1.vue'
+import HelloWorld from '../views/HelloWorld.vue'
+import ConvertTool1 from '../views/tools/ConvertTool1.vue'
 
 // 2. 定义一些路由
 // 每个路由都需要映射到一个组件。
