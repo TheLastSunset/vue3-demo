@@ -7,5 +7,8 @@ export default defineConfig({
   resolve: {
     alias: {
     }
+  },
+  build: {
+    manifest: true,
   }
 })
