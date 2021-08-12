@@ -16,32 +16,31 @@
 </template>
 
 <script lang="ts">
-import { ref, defineComponent } from "vue";
+import { ref, defineComponent } from 'vue';
+
 export default defineComponent({
-  name: "ConvertTool1",
+  name: 'ConvertTool1',
   data() {
     return {
       rows: 10,
-      cols: 100
-    }
+      cols: 100,
+    };
   },
   setup: () => {
     const count = ref<number>(0);
-    const text = ref<string>("");
-    const output = ref<string>("");
+    const text = ref<string>('');
+    const output = ref<string>('');
     return { count, text, output };
   },
   methods: {
     camelCaseNaming() {
-      let text = this.text || ''
-      let lowerText = text.trim().toLowerCase();
-      this.output = lowerText.replace(/\_(\w)/g, function (all, letter) {
-        return letter.toUpperCase();
-      });
+      const text = this.text || '';
+      const lowerText = text.trim().toLowerCase();
+      this.output = lowerText.replace(/_(\w)/g, (all, letter) => letter.toUpperCase());
     },
     underscore() {
-      let text = this.text || ''
-      this.output = text.trim().replace(/([A-Z])/g, "_$1").toUpperCase();
+      const text = this.text || '';
+      this.output = text.trim().replace(/([A-Z])/g, '_$1').toUpperCase();
     },
   },
 });
