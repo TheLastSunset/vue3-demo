@@ -3,7 +3,7 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: ['plugin:vue/essential', 'airbnb-base'], // 添加 prettier 插件,
+  extends: ['plugin:vue/vue3-essential', 'airbnb-base'],
   parserOptions: {
     ecmaVersion: 12,
     parser: '@typescript-eslint/parser',
