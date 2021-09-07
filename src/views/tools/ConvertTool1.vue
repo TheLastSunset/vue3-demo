@@ -1,49 +1,62 @@
 <template>
   <el-input
+    v-model="text"
     type="textarea"
-    :autosize="{ minRows: rows, maxRows: cols}"
-    v-model="text">
-  </el-input>
-  <hr />
-  <el-button type="info" @click="camelCaseNaming">Convert to camel case naming</el-button>
-  <el-button type="info" @click="underscore">Convert to underscore</el-button>
-  <hr />
+    :autosize="{ minRows: rows, maxRows: cols }"
+  />
+  <hr>
+  <el-button
+    type="info"
+    @click="camelCaseNaming"
+  >
+    Convert to camel case naming
+  </el-button>
+  <el-button
+    type="info"
+    @click="underscore"
+  >
+    Convert to underscore
+  </el-button>
+  <hr>
   <el-input
+    v-model="output"
     type="textarea"
-    :autosize="{ minRows: rows, maxRows: cols}"
-    v-model="output">
-  </el-input>
+    :autosize="{ minRows: rows, maxRows: cols }"
+  />
 </template>
 
 <script lang="ts">
-import { ref, defineComponent } from 'vue';
+import { ref, defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'ConvertTool1',
+  setup: () => {
+    const count = ref<number>(0)
+    const text = ref<string>('')
+    const output = ref<string>('')
+    return { count, text, output }
+  },
   data() {
     return {
       rows: 10,
       cols: 100,
-    };
-  },
-  setup: () => {
-    const count = ref<number>(0);
-    const text = ref<string>('');
-    const output = ref<string>('');
-    return { count, text, output };
+    }
   },
   methods: {
     camelCaseNaming() {
-      const text = this.text || '';
-      const lowerText = text.trim().toLowerCase();
-      this.output = lowerText.replace(/_(\w)/g, (all, letter) => letter.toUpperCase());
+      const text = this.text || ''
+      const lowerText = text.trim().toLowerCase()
+      this.output = lowerText.replace(/_(\w)/g, (all, letter) => letter.toUpperCase())
     },
     underscore() {
-      const text = this.text || '';
-      this.output = text.trim().replace(/([A-Z])/g, '_$1').toUpperCase();
+      const text = this.text || ''
+      this.output = text
+        .trim()
+        .replace(/([A-Z])/g, '_$1')
+        .toUpperCase()
     },
   },
-});
+})
 </script>
 
 <style scoped>
@@ -62,5 +75,4 @@ code {
   border-radius: 4px;
   color: #304455;
 }
-
 </style>
