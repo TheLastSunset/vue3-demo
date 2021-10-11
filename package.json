@@ -9,28 +9,28 @@
     "fix": "eslint src --ext .vue --fix"
   },
   "dependencies": {
-    "element-plus": "^1.1.0-beta.15",
-    "element-pro-components": "^0.13.0",
+    "element-plus": "^1.1.0-beta.20",
+    "element-pro-components": "^0.13.2",
     "vue": "^3.2.x",
     "vue-router": "^4.0.x",
     "vuex": "^4.0.x"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.31.2",
-    "@typescript-eslint/parser": "^4.31.2",
-    "@vitejs/plugin-vue": "^1.9.0",
-    "@vue/compiler-sfc": "^3.2.14",
+    "@typescript-eslint/eslint-plugin": "^4.33.0",
+    "@typescript-eslint/parser": "^4.33.0",
+    "@vitejs/plugin-vue": "^1.9.3",
+    "@vue/compiler-sfc": "^3.2.20",
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-config-prettier": "^8.3.0",
     "eslint-import-resolver-alias": "^1.1.2",
     "eslint-plugin-import": "^2.24.2",
     "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-vue": "^7.18.0",
+    "eslint-plugin-vue": "^7.19.1",
     "prettier": "^2.4.1",
     "sass": "^1.42.1",
     "typescript": "~4.4",
-    "vite": "^2.5.10",
-    "vue-tsc": "^0.3.0"
+    "vite": "^2.6.5",
+    "vue-tsc": "^0.28.2"
   }
 }
